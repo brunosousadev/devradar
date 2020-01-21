@@ -2,7 +2,8 @@
 
 Projeto desenvolvido durante a semana OmniStack 10 🚀, que é oferecida pela [Rocketseat](https://github.com/Rocketseat). O projeto envolve o desenvolvimento de uma aplicação do zero, trabalhado seu back-end, front-end e Mobile.
 
-DevRadar, uma aplicação que permite cadastrar Dev's apartir da API do github para encontrar os dados do dev e salvar em um banco da aplicação. Partindo disso podemos encontrar os Dev's pela sua localização assim encontramos Dev's pelas tecnologias que gostam.
+DevRadar, uma aplicação que permite cadastrar Dev's apartir da API do github para encontrar os dados do dev e salvar em um banco da aplicação. Partindo disso a aplicação visa conectar dev's próximos a você que trabalham com as mesmas tecnologias.
+
 
 # Funcionamento da API do github
 
