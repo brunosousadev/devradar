@@ -20,7 +20,9 @@ A funcionalidade é bem simples basta solicitar na url abaixo no local do userna
 ## ✋🏻 Pré-requisitos
 
 - [Node.js](https://nodejs.org/en/)
-- [Yarn](https://yarnpkg.com/pt-BR/docs/install)
+- [React](https://reactjs.org)
+- [React Native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
 
 ## Passos para utilizar 
 1. Faça um clone desse repositório;
