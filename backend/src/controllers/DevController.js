@@ -15,13 +15,12 @@ module.exports = {
     async store(req, res) {
         const { github_username, techs, latitude, longitude } = req.body;
         
-
-        let dev = await Dev.findOne({ github_username });
+        try {
+            let dev = await Dev.findOne({ github_username });
 
         if (!dev) {        
             
-            const response = await axios.get(`https://api.github.com/users/${github_username}`);
-            console.log(response.data);
+            const response = await axios.get(`https://api.github.com/users/${github_username}`);            
             const { name = login, avatar_url, bio } = response.data;
             const techsArray = parseStringAsArray(techs);
 
@@ -40,5 +39,9 @@ module.exports = {
             
         }
         return res.json(dev);
+        } catch (error) {
+            return response.status(404).json('User does not exists');
+        }
+        
     }
 };

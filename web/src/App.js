@@ -11,7 +11,7 @@ import DevForm from './components/DevForm';
 
 function App() {
   const [devs, setDevs] = useState([]);
-
+  const [invalidUser, setInvalidUser] = useState('');
 
   useEffect(() => {
     async function loadDevs() {
@@ -24,10 +24,15 @@ function App() {
 
 
   async function handleSubmit(data) {
+    try {
+      const response = await api.post('/devs', data);
 
-    const response = await api.post('/devs', data);
+      setDevs([...devs, response.data]);
 
-    setDevs([...devs, response.data]);
+    } catch (error) {
+      setInvalidUser(error.response.data);
+    }
+    
 
   }
 
@@ -36,6 +41,7 @@ function App() {
     <div id="app">
       <aside>
         <strong>Cadastrar</strong>
+        <span>{invalidUser}</span>
         <DevForm onSubmit={handleSubmit} />
       </aside>
       <main>
